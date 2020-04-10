@@ -1,0 +1,22 @@
+<%= form_with(model: languagegenre, local: true) do |form| %>
+  <% if languagegenre.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(languagegenre.errors.count, "error") %> prohibited this languagegenre from being saved:</h2>
+
+      <ul>
+        <% languagegenre.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :language_genre %>
+    <%= form.number_field :language_genre %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Languagegenres</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Language genre</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @languagegenres.each do |languagegenre| %>
+      <tr>
+        <td><%= languagegenre.language_genre %></td>
+        <td><%= link_to 'Show', languagegenre %></td>
+        <td><%= link_to 'Edit', edit_languagegenre_path(languagegenre) %></td>
+        <td><%= link_to 'Destroy', languagegenre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Languagegenre', new_languagegenre_path %>
