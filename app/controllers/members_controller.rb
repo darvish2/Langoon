@@ -11,6 +11,9 @@ class MembersController < ApplicationController
   def postmember
   end
 
+  def choose
+  end
+
 
 
   # GET /members/1

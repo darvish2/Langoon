@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 	resources :languagenames
 	resources :languagegenres
 	get "members/postmember" => "members#postmember"
+	get "members/choose" => "members#choose"
 	devise_for :members
 	resources :posts
 	resources :members
