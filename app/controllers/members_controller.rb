@@ -7,6 +7,15 @@ class MembersController < ApplicationController
     @members = Member.all
   end
 
+
+  def postmember
+  end
+
+  def choose
+  end
+
+
+
   # GET /members/1
   # GET /members/1.json
   def show
@@ -71,4 +80,4 @@ class MembersController < ApplicationController
     def member_params
       params.fetch(:member, {})
     end
-end
+  end
