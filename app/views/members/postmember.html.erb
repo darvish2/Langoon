@@ -13,9 +13,10 @@
       <ul class="nav navbar-nav">
         <li class="active"><%= link_to 'Langoon', root_path %></li>
         <li><%= link_to 'このサイトについて', top_about_path %> </li>
-        <li><a href="#">学習コンテンツ</a></li>
-        <li><%= link_to 'コンテンツ投稿', members_choose_path %></li>
-        <li><%= link_to '会員ログアウト', destroy_member_session_path %></li>
+        <li><%= link_to 'マイページ', member_path(current_member.id) %> </li>
+        <li><%= link_to '学習コンテンツ', languagenames_contents_path %></li>
+        <li><%= link_to 'コンテンツ投稿', new_post_path %></li>
+        <li><%= link_to '会員ログアウト', destroy_member_session_path, method: :delete %></li>
         <li><a href="#">English</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -25,7 +26,7 @@
 </nav>
 
 <div class="col-sm-8 text-left">
-  <div class="image-background">
+  <div class="image-background-2">
     <font  size="７" color="white">Langoon</font>
     <br>
     <font  size="５" color="white">いつか大海へ漕ぎ出すあなたのために。</font>

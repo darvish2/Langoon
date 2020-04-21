@@ -1,6 +1,15 @@
 class LanguagenamesController < ApplicationController
   before_action :set_languagename, only: [:show, :edit, :update, :destroy]
 
+  def contents
+  end
+
+  def japanese
+    @posts = Languagename.japanese.map(&:posts).flatten
+  end
+
+
+
   # GET /languagenames
   # GET /languagenames.json
   def index
@@ -71,4 +80,4 @@ class LanguagenamesController < ApplicationController
     def languagename_params
       params.require(:languagename).permit(:language_name)
     end
-end
+  end

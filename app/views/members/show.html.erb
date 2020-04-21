@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<div class="profile-container">
+    <h5 class="profile-name"><%= @member.name %></h3>
+    <h5 class="profile-email"><%= @member.email %></h3>
+</div>
+
+
 <%= link_to 'Log out', destroy_member_session_path,method: :delete %>
 <%= link_to 'Edit', edit_member_path(@member) %> |
 <%= link_to 'Back', members_path %>

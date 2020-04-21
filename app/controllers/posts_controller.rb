@@ -1,6 +1,25 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+
+def english
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   # GET /posts
   # GET /posts.json
   def index
@@ -17,6 +36,9 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+
+
+
   # GET /posts/1/edit
   def edit
   end
@@ -24,17 +46,24 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = current_member.posts.new(post_params)
+    if @post.save
 
-    respond_to do |format|
-      if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
-      else
-        format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
+      redirect_to members_postmember_path
+    else
+
+      redirect_to root_path
     end
+    # respond_to do |format|
+    #   if @post.save
+    #     #format.html { redirect_to @post, notice: 'Post was successfully created.' }
+    #     format.html { redirect_to members_postmember_path, notice: 'Post was successfully created.' }
+    #     format.json { render :show, status: :created, location: @post }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @post.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /posts/1
@@ -69,6 +98,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.fetch(:post, {})
+      params.require(:post).permit(:title, :languagename_id, :learning_genre, :post_content)
     end
 end
