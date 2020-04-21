@@ -1,0 +1,61 @@
+&nbsp;
+
+
+<br>
+<br>
+<a href="#" class="btn-sf-like">&emsp;&emsp;Vocabulary&emsp;&emsp;</a>
+<br>
+<br>
+<% @posts.each do |post| %>
+	<% if post.Vocabulary? %>
+		<button class="btn-gradient-3d" onclick="location.href='/languagenames/japanese'">&emsp;&emsp;
+			<%= post.title %>
+		&emsp;&emsp;</button>
+	<% end %>
+<% end %>
+
+
+
+<br>
+<br>
+<a href="#" class="btn-sf-like">&emsp;&emsp;Syntax&emsp;&emsp;</a>
+<br>
+<br>
+<% @posts.each do |post| %>
+	<% if post.Syntax? %>
+		<button class="btn-gradient-3d" onclick="location.href='/languagenames/japanese'">&emsp;&emsp;
+			<%= post.title %>
+		&emsp;&emsp;</button>
+	<% end %>
+<% end %>
+
+
+
+<br>
+<br>
+<a href="#" class="btn-sf-like">&emsp;&emsp;Practice&emsp;&emsp;</a>
+<br>
+<br>
+<% @posts.each do |post| %>
+	<% if post.Vocabulary? %>
+		<button class="btn-gradient-3d" onclick="location.href='/languagenames/japanese'">&emsp;&emsp;
+			<%= post.title %>
+		&emsp;&emsp;</button>
+	<% end %>
+<% end %>
+
+
+
+
+<br>
+<br>
+<a href="#" class="btn-sf-like">&emsp;&emsp;Others&emsp;&emsp;</a>
+<br>
+<br>
+<% @posts.each do |post| %>
+	<% if post.Syntax? %>
+		<button class="btn-gradient-3d" onclick="location.href='/languagenames/japanese'">&emsp;&emsp;
+			<%= post.title %>
+		&emsp;&emsp;</button>
+	<% end %>
+<% end %>

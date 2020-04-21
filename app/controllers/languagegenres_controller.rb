@@ -9,8 +9,10 @@ class LanguagegenresController < ApplicationController
 
   # GET /languagegenres/1
   # GET /languagegenres/1.json
-  def show
-  end
+  #def show
+    #@languagegenres = Languagegenre.find(params[:id]) 
+    #@languagegenres.languagenames.id
+  #end
 
   # GET /languagegenres/new
   def new

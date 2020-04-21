@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_10_153825) do
+ActiveRecord::Schema.define(version: 2020_04_21_093213) do
 
   create_table "languagegenres", force: :cascade do |t|
     t.integer "language_genre"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2020_04_10_153825) do
     t.integer "language_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "computerlanguage_name"
+    t.string "name"
   end
 
   create_table "members", force: :cascade do |t|
@@ -48,7 +50,16 @@ ActiveRecord::Schema.define(version: 2020_04_10_153825) do
     t.string "post_content"
     t.datetime "deleted_at"
     t.integer "learning_genre"
+    t.integer "languagename_id"
+    t.integer "member_id"
+    t.integer "languagegenre_id"
     t.index ["deleted_at"], name: "index_posts_on_deleted_at"
+    t.index ["languagegenre_id"], name: "index_posts_on_languagegenre_id"
+    t.index ["languagename_id"], name: "index_posts_on_languagename_id"
+    t.index ["member_id"], name: "index_posts_on_member_id"
   end
 
+  add_foreign_key "posts", "languagegenres"
+  add_foreign_key "posts", "languagenames"
+  add_foreign_key "posts", "members"
 end

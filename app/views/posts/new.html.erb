@@ -1,16 +1,27 @@
-<h1>新規投稿</h1>
+<h3>新規投稿</h3>
 <!-- form_for部分 -->
-<%= form_for(@post, url: '/posts') do |f| %>
- 
-    <h4>タイトル</h4>
-    <%= f.text_field :title %>
- 
-    <h4>投稿内容</h4>
-    <%= f.text_area :post_content %>
- 
+<%= form_for(@post) do |f| %>
 
- 
+	<h4>タイトル</h4>
+	<%= f.text_field :title %>
+
+
+	<h4>言語名</h4>
+    <%= f.collection_select :languagename_id, Languagename.all, :id, :name, :include_blank => true %>
+
+
+
+	<h4>学習ジャンル</h4>
+	<!-- Article.statuses.keys.to_a -->
+	<%# binding.pry %>
+	<%= f.select :learning_genre, Post.learning_genres.keys.to_a, { include_blank: true } %>
+
+	<h4>投稿内容</h4>
+	<%= f.text_area :post_content %>
+
+
+　　　<%= f.submit "送信" %>
 <% end %>
 
-<%= render 'form', post: @post %>
+
 
