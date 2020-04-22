@@ -1,6 +1,30 @@
-<h1>Editing Member</h1>
+&nbsp;
+&emsp;
 
-<%= render 'form', member: @member %>
+<%= form_for @member do |f| %>
 
-<%= link_to 'Show', @member %> |
-<%= link_to 'Back', members_path %>
+<br>
+<br>
+
+  <p>
+  <%= f.label(:name, "名前") %>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <%= f.text_field :name %>
+  </p>
+  <br>
+
+
+  <p>
+  <%= f.label :email, "メールアドレス" %>
+  &emsp;&emsp;
+  <%= f.text_field :email %>
+  </p>
+  <br>
+
+
+  <%= f.submit "登録" %>
+<% end %>
+
+
+
+<%= link_to "戻る", members_postmember_path %>

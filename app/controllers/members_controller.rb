@@ -19,7 +19,7 @@ class MembersController < ApplicationController
   # GET /members/1
   # GET /members/1.json
   def show
-  @member = Member.find(params[:id])
+    @member = Member.find(params[:id])
   end
 
   # GET /members/new
@@ -29,6 +29,7 @@ class MembersController < ApplicationController
 
   # GET /members/1/edit
   def edit
+    @member = Member.find(params[:id])
   end
 
   # POST /members
@@ -50,15 +51,9 @@ class MembersController < ApplicationController
   # PATCH/PUT /members/1
   # PATCH/PUT /members/1.json
   def update
-    respond_to do |format|
-      if @member.update(member_params)
-        format.html { redirect_to @member, notice: 'Member was successfully updated.' }
-        format.json { render :show, status: :ok, location: @member }
-      else
-        format.html { render :edit }
-        format.json { render json: @member.errors, status: :unprocessable_entity }
-      end
-    end
+    @member = Member.find(params[:id])
+    @member.update(params.require(:member).permit(:name, :email))
+    redirect_to members_postmember_path
   end
 
   # DELETE /members/1
