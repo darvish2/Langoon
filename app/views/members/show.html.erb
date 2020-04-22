@@ -1,11 +1,28 @@
-<p id="notice"><%= notice %></p>
 
-<div class="profile-container">
-    <h5 class="profile-name"><%= @member.name %></h3>
-    <h5 class="profile-email"><%= @member.email %></h3>
-</div>
+<%= form_for @member do |f| %>
+
+<br>
+<br>
+
+<p>
+	<%= f.label(:name, "名前") %>
+	&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+	<%= @member.name %>
+</p>
+<br>
 
 
-<%= link_to 'Log out', destroy_member_session_path,method: :delete %>
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+<p>
+	<%= f.label :email, "メールアドレス" %>
+	&emsp;&emsp;
+	<%= @member.email %>
+</p>
+<br>
+
+
+
+<%= link_to '編集', edit_member_path(@member) %>
+<br>
+<%= link_to "戻る", members_postmember_path %>
+
+<% end %>

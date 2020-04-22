@@ -1,4 +1,7 @@
 &nbsp;
+&emsp;
+
+
 
 
 <br>
@@ -8,9 +11,12 @@
 <br>
 <% @posts.each do |post| %>
 	<% if post.Vocabulary? %>
-		<button class="btn-gradient-3d" onclick="location.href='/languagenames/japanese'">&emsp;&emsp;
-			<%= post.title %>
-		&emsp;&emsp;</button>
+		<%= link_to "/languagenames/#{post.languagename_id}/posts/#{post.id}" do %>
+			<button class="btn-gradient-3d">
+				&emsp;&emsp;<%= post.title %>&emsp;&emsp;
+			</button>
+
+		<% end %>
 	<% end %>
 <% end %>
 
@@ -23,9 +29,12 @@
 <br>
 <% @posts.each do |post| %>
 	<% if post.Syntax? %>
-		<button class="btn-gradient-3d" onclick="location.href='/languagenames/japanese'">&emsp;&emsp;
-			<%= post.title %>
-		&emsp;&emsp;</button>
+		<%= link_to "/languagenames/#{post.languagename_id}/posts/#{post.id}" do %>
+			<button class="btn-gradient-3d">
+				&emsp;&emsp;<%= post.title %>&emsp;&emsp;
+			</button>
+
+		<% end %>
 	<% end %>
 <% end %>
 
@@ -37,13 +46,15 @@
 <br>
 <br>
 <% @posts.each do |post| %>
-	<% if post.Vocabulary? %>
-		<button class="btn-gradient-3d" onclick="location.href='/languagenames/japanese'">&emsp;&emsp;
-			<%= post.title %>
-		&emsp;&emsp;</button>
+	<% if post.Practice? %>
+		<%= link_to "/languagenames/#{post.languagename_id}/posts/#{post.id}" do %>
+			<button class="btn-gradient-3d">
+				&emsp;&emsp;<%= post.title %>&emsp;&emsp;
+			</button>
+
+		<% end %>
 	<% end %>
 <% end %>
-
 
 
 
@@ -53,9 +64,12 @@
 <br>
 <br>
 <% @posts.each do |post| %>
-	<% if post.Syntax? %>
-		<button class="btn-gradient-3d" onclick="location.href='/languagenames/japanese'">&emsp;&emsp;
-			<%= post.title %>
-		&emsp;&emsp;</button>
+	<% if post.Others? %>
+		<%= link_to "/languagenames/#{post.languagename_id}/posts/#{post.id}" do %>
+			<button class="btn-gradient-3d">
+				&emsp;&emsp;<%= post.title %>&emsp;&emsp;
+			</button>
+
+		<% end %>
 	<% end %>
 <% end %>
