@@ -20,6 +20,10 @@ class MembersController < ApplicationController
   # GET /members/1.json
   def show
     @member = Member.find(params[:id])
+
+    # サンプルとして下記に記述
+    memberId = current_member.id
+    @currentMemberPostList = Post.where(member_id: memberId)
   end
 
   # GET /members/new

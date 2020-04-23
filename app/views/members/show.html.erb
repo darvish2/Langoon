@@ -1,28 +1,55 @@
 
 <%= form_for @member do |f| %>
-
+<br><%= link_to "戻る", members_postmember_path %><br><br>
+-------------------------------------------------------------------------
 <br>
-<br>
-
+プロフィール
+<br><br>
 <p>
 	<%= f.label(:name, "名前") %>
 	&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 	<%= @member.name %>
-</p>
-<br>
-
+</p><br>
 
 <p>
 	<%= f.label :email, "メールアドレス" %>
 	&emsp;&emsp;
 	<%= @member.email %>
-</p>
-<br>
+</p><br>
 
-
-
-<%= link_to '編集', edit_member_path(@member) %>
-<br>
-<%= link_to "戻る", members_postmember_path %>
-
+<%= link_to '編集', edit_member_path(@member) %><br>
+-------------------------------------------------------------------------
+<br><br><br><br>以下はあなたの投稿一覧です。<br>
+-------------------------------------------------------------------------
 <% end %>
+
+
+
+
+
+<% if @currentMemberPostList.empty? %>
+<% else %>
+<% @currentMemberPostList.each do |post| %>
+<%= form_for post do |f| %>
+<br>
+
+<p>
+	<%= f.label(:title, "タイトル：") %>
+	<br>
+	<%= post.title %>
+</p><br>
+
+
+<p>
+	<%= f.label :post_content, "投稿内容：" %>
+	<br>
+	<%= post.post_content %>
+</p><br>
+
+<%= link_to '編集', edit_post_path(post) %><br>
+<%= link_to '削除', edit_post_path(post) %><br>
+-------------------------------------------------------------------------
+<% end %>
+<% end %>
+<% end %>
+
