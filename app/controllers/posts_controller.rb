@@ -30,6 +30,7 @@ end
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+
   end
 
   # GET /posts/new
@@ -40,9 +41,17 @@ end
 
 
 
-  # GET /posts/1/edit
-  def edit
-  end
+def edit
+    @post = Post.find(params[:id])
+end
+
+def update
+    post = Post.find(params[:id])
+    post.update(post_params)
+    redirect_to members_postmember_path
+end
+
+
 
   # POST /posts
   # POST /posts.json
@@ -67,19 +76,6 @@ end
     # end
   end
 
-  # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
-  def update
-    respond_to do |format|
-      if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        format.json { render :show, status: :ok, location: @post }
-      else
-        format.html { render :edit }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   # DELETE /posts/1
   # DELETE /posts/1.json
