@@ -55,7 +55,6 @@ class Languagename < ApplicationRecord
         c_sharp: 49,
         c_plusplus: 50
 
-
     }
 
 

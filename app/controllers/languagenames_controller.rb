@@ -4,209 +4,215 @@ class LanguagenamesController < ApplicationController
   def contents
   end
 
-  def japanese
+
+
+
+  def l_japanese
     @posts = Languagename.japanese.map(&:posts).flatten
   end
 
-def english
+  def l_english
     @posts = Languagename.english.map(&:posts).flatten
   end
 
-def french
+  def l_french
     @posts = Languagename.french.map(&:posts).flatten
   end
 
-def chinese
+  def l_chinese
     @posts = Languagename.chinese.map(&:posts).flatten
   end
 
-def spanish
+  def l_spanish
     @posts = Languagename.spanish.map(&:posts).flatten
   end
 
-def russian
+  def l_russian
     @posts = Languagename.russian.map(&:posts).flatten
   end
 
-def arabic
+  def l_arabic
     @posts = Languagename.arabic.map(&:posts).flatten
   end
 
-def german
+  def l_german
     @posts = Languagename.german.map(&:posts).flatten
   end
 
-def italian
+  def l_italian
     @posts = Languagename.italian.map(&:posts).flatten
   end
 
-def indonesian
+  def l_indonesian
     @posts = Languagename.indonesian.map(&:posts).flatten
   end
 
-def malay
+  def l_malay
     @posts = Languagename.malay.map(&:posts).flatten
   end
 
-def vietnamese
+  def l_vietnamese
     @posts = Languagename.vietnamese.map(&:posts).flatten
   end
 
-def swedish
+  def l_swedish
     @posts = Languagename.swedish.map(&:posts).flatten
   end
 
-def hebrew
+  def l_hebrew
     @posts = Languagename..map(&:posts).flatten
   end
 
-def portuguese
+  def l_portuguese
     @posts = Languagename..map(&:posts).flatten
   end
 
-def esperanto
+  def l_esperanto
     @posts = Languagename.esperanto.map(&:posts).flatten
   end
 
-def vendergood
+  def l_vendergood
     @posts = Languagename.vendergood.map(&:posts).flatten
   end
 
-def latin
+  def l_latin
     @posts = Languagename.latin.map(&:posts).flatten
   end
 
-def greek
+  def l_greek
     @posts = Languagename.greek.map(&:posts).flatten
   end
 
-def ainu
+  def l_ainu
     @posts = Languagename.ainu.map(&:posts).flatten
   end
 
-def korean
+  def l_korean
     @posts = Languagename.korean.map(&:posts).flatten
   end
 
-def hawaiian
+  def l_hawaiian
     @posts = Languagename.hawaiian.map(&:posts).flatten
   end
 
-def turkish
+  def l_turkish
     @posts = Languagename.turkish.map(&:posts).flatten
   end
 
-def dutch
+  def l_dutch
     @posts = Languagename.dutch.map(&:posts).flatten
   end
 
-def ancient_japanese
+  def l_ancient_japanese
     @posts = Languagename.ancient_japanese.map(&:posts).flatten
   end
 
-def html
+  def l_html
     @posts = Languagename.html.map(&:posts).flatten
   end
 
-def css
+  def l_css
     @posts = Languagename.css.map(&:posts).flatten
   end
 
-def ruby
+  def l_ruby
     @posts = Languagename.ruby.map(&:posts).flatten
   end
 
-def javascript
+  def l_javascript
     @posts = Languagename.javascript.map(&:posts).flatten
   end
 
-def php
+  def l_php
     @posts = Languagename.php.map(&:posts).flatten
   end
 
-def sql
+  def l_sql
     @posts = Languagename.sql.map(&:posts).flatten
   end
 
-def go
+  def l_go
     @posts = Languagename.go.map(&:posts).flatten
   end
 
-def c
+  def l_c
     @posts = Languagename.c.map(&:posts).flatten
   end
 
-def c_sharp
+  def l_c_sharp
     @posts = Languagename..map(&:posts).flatten
   end
 
-def c_plusplus
+  def l_c_plusplus
     @posts = Languagename..map(&:posts).flatten
   end
 
-def kotlin
+  def l_kotlin
     @posts = Languagename.kotlin.map(&:posts).flatten
   end
 
-def java
+  def l_java
     @posts = Languagename.java.map(&:posts).flatten
   end
 
-def python
+  def l_python
     @posts = Languagename.python.map(&:posts).flatten
   end
 
-def swift
+  def l_swift
     @posts = Languagename.swift.map(&:posts).flatten
   end
 
-def sign_language
+  def l_sign_language
     @posts = Languagename.sign_language.map(&:posts).flatten
   end
 
-def braille
+  def l_braille
     @posts = Languagename.braille.map(&:posts).flatten
   end
 
-def newspeak
+  def l_newspeak
     @posts = Languagename.newspeak.map(&:posts).flatten
   end
 
-def ancient_greek
+  def l_ancient_greek
     @posts = Languagename.ancient_greek.map(&:posts).flatten
   end
 
-def ancient_latin
+  def l_ancient_latin
     @posts = Languagename.ancient_latin.map(&:posts).flatten
   end
 
-def maori
+  def l_maori
     @posts = Languagename.maori.map(&:posts).flatten
   end
 
-def luxemburgisch
+  def l_luxemburgisch
     @posts = Languagename.luxemburgisch.map(&:posts).flatten
   end
 
-def bengali
+  def l_bengali
     @posts = Languagename.bengali.map(&:posts).flatten
   end
 
-def sansklit
+  def l_sansklit
     @posts = Languagename.sansklit.map(&:posts).flatten
   end
 
-def hieroglyph
+  def l_hieroglyph
     @posts = Languagename.hieroglyph.map(&:posts).flatten
   end
 
-def swahili
+  def l_swahili
     @posts = Languagename.swahili.map(&:posts).flatten
   end
 
-def ryukyu
+  def l_ryukyu
     @posts = Languagename.ryukyu.map(&:posts).flatten
   end
+
+
+
 
 
 
