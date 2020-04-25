@@ -62,6 +62,7 @@ gem 'devise'
 gem 'paranoia'
 gem 'cancancan'
 gem 'rails_admin'
+gem 'audiojs-rails'
 
 gem 'dotenv-rails'
 group :production do
