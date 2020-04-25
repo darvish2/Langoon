@@ -16,6 +16,10 @@ Rails.application.routes.draw do
 
 
 
+
+
+
+
   get "languagenames/l_japanese" => "languagenames#l_japanese"
 
   get "languagenames/l_english" => "languagenames#l_english"
@@ -128,6 +132,7 @@ Rails.application.routes.draw do
 
 
   get "posts/english" => "posts#english"
+
 
   resources :posts
   resources :members
