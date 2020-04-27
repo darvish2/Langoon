@@ -36,6 +36,8 @@ end
   # GET /posts/new
   def new
     @post = Post.new
+    #@post.uploadfiles.build
+    # binding.pry
   end
 
 
@@ -91,6 +93,7 @@ end
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :languagename_id, :learning_genre, :post_content)
+      params.require(:post).permit(:title, :languagename_id, :learning_genre, :post_content,
+      images_attributes: [:id, :uploadfile, :_destroy])
     end
 end
