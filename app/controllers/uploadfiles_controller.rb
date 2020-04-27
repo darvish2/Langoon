@@ -1,4 +1,4 @@
-# class UploadfilesController < ApplicationController
+ class UploadfilesController < ApplicationController
 
 #   def new
 #     @uploadfile = Uploadfile.new
@@ -15,4 +15,4 @@
 #   def uploadfile_params
 #     params.require(:uploadfile).permit(:post)
 #   end
-# end
+ end
