@@ -9,6 +9,8 @@ class Post < ApplicationRecord
 
 	belongs_to :languagename
 	belongs_to :member
+	has_many :uploadfiles, dependent: :destroy, inverse_of: :post
+	accepts_nested_attributes_for :uploadfiles
 
 	acts_as_paranoid
 end

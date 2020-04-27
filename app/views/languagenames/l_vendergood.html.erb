@@ -1,0 +1,95 @@
+&nbsp;
+&emsp;
+
+<br>
+<br>
+<a href="#" class="btn-gradient-3d-2">ヴェンダーグッド</a>
+<br>
+<font  size="５" color="black"></font>
+<br>
+<font  size="５" color="black"></font>
+<br>
+<font  size="５" color="black"></font>
+<br>
+<font  size="５" color="black"></font>
+<br>
+<%= link_to "会員トップ", members_postmember_path %>
+<br>
+
+
+
+<br>
+<br>
+<a href="#" class="btn-sf-like">&emsp;&emsp;Vocabulary&emsp;&emsp;</a>
+<br>
+<br>
+<% @posts.each do |post| %>
+<% if post.Vocabulary? %>
+<%= link_to "/languagenames/#{post.languagename_id}/posts/#{post.id}" do %>
+<button class="btn-gradient-3d">
+	&emsp;&emsp;<%= post.title %>&emsp;&emsp;
+</button>
+
+<% end %>
+<% end %>
+<% end %>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<a href="#" class="btn-sf-like">&emsp;&emsp;&emsp;Syntax&emsp;&emsp;&emsp;</a>
+<br>
+<br>
+<% @posts.each do |post| %>
+<% if post.Syntax? %>
+<%= link_to "/languagenames/#{post.languagename_id}/posts/#{post.id}" do %>
+<button class="btn-gradient-3d">
+	&emsp;&emsp;<%= post.title %>&emsp;&emsp;
+</button>
+
+<% end %>
+<% end %>
+<% end %>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<a href="#" class="btn-sf-like">&emsp;&emsp;Practice&emsp;&emsp;</a>
+<br>
+<br>
+<% @posts.each do |post| %>
+<% if post.Practice? %>
+<%= link_to "/languagenames/#{post.languagename_id}/posts/#{post.id}" do %>
+<button class="btn-gradient-3d">
+	&emsp;&emsp;<%= post.title %>&emsp;&emsp;
+</button>
+
+<% end %>
+<% end %>
+<% end %>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<a href="#" class="btn-sf-like">&emsp;&emsp;&emsp;Others&emsp;&emsp;&emsp;</a>
+<br>
+<br>
+<% @posts.each do |post| %>
+<% if post.Others? %>
+<%= link_to "/languagenames/#{post.languagename_id}/posts/#{post.id}" do %>
+<button class="btn-gradient-3d">
+	&emsp;&emsp;<%= post.title %>&emsp;&emsp;
+</button>
+
+<% end %>
+<% end %>
+<% end %>

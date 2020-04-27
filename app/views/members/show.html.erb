@@ -27,6 +27,7 @@
 
 
 
+
 <% if @currentMemberPostList.empty? %>
 <% else %>
 <% @currentMemberPostList.each do |post| %>
@@ -38,6 +39,23 @@
 	<br>
 	<%= post.title %>
 </p><br>
+
+
+<%
+=begin
+%>
+<p>
+	<%= f.label(:uploadfile_id, "ファイル：") %>
+	<br>
+	<% post.uploadfiles.each do |uploadfile| %>
+		<% if uploadfile.uploadfile.present? %>
+			<%= attachment_image_tag uploadfile, :uploadfile, :fill, 120, 120, format: 'jpeg' %>
+		<% end %>
+	<% end %>
+</p><br>
+<%
+=end
+%>
 
 
 <p>

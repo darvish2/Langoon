@@ -60,11 +60,11 @@ class LanguagenamesController < ApplicationController
   end
 
   def l_hebrew
-    @posts = Languagename..map(&:posts).flatten
+    @posts = Languagename.hebrew.map(&:posts).flatten
   end
 
   def l_portuguese
-    @posts = Languagename..map(&:posts).flatten
+    @posts = Languagename.portuguese.map(&:posts).flatten
   end
 
   def l_esperanto
@@ -140,11 +140,11 @@ class LanguagenamesController < ApplicationController
   end
 
   def l_c_sharp
-    @posts = Languagename..map(&:posts).flatten
+    @posts = Languagename.c_sharp.map(&:posts).flatten
   end
 
   def l_c_plusplus
-    @posts = Languagename..map(&:posts).flatten
+    @posts = Languagename.c_plusplus.map(&:posts).flatten
   end
 
   def l_kotlin
