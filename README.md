@@ -1,24 +1,19 @@
-# README
+<サービス名>
+Langoon(ラングーン)
+※lang(フランス語で言語)＋lagoon(英語で浅瀬)を組み合わせた造語
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+<コンセプト>
+言語(人間の扱う自然言語、コンピュータ言語)を学習・記録する為のサイト
 
-* Ruby version
 
-* System dependencies
+<作成したきっかけ >
+①言語に関するコンテンツを無料公開することにより、
+言語習得の敷居を低くし、あらゆる人間の選択肢を増やしたいと考えた為。
 
-* Configuration
+②消えゆく可能性のある言語を記録することにより、
+その文化的価値を半永久的に保存すると共にアクセス可能にしたいと考えた為。
 
-* Database creation
+③新たに生み出された言語を記録することにより、
+多くの人にその存在を認知・活用してもらいたいと考えた為。
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
