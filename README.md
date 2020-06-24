@@ -19,3 +19,12 @@ Langoon(ラングーン)<br>
 ③新たに生み出された言語を記録することにより、  
  多くの人にその存在を認知・活用してもらいたいと考えた為。  
 <br>
+<br>
+
+<テーブル定義書>
+https://drive.google.com/file/d/1pBZwv5otYZu0QQuGevs4gymmQAmkBJtn/view?usp=sharing
+<br>
+<br>
+
+<ワイヤーフレーム>
+https://drive.google.com/file/d/1r5Pbz1tkhb8iyspc-nFO48oA_2ZpM4tN/view?usp=sharing
